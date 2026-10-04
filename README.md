@@ -1,6 +1,6 @@
 # Make Social Media Pipeline
 
-**Turns one content idea into platform-appropriate posts for LinkedIn, X, Instagram, Facebook and a blog, then schedules them.**
+**Turns one content idea into platform-appropriate post variants for LinkedIn, X, Instagram, Facebook and a blog. Generation is template-based and publishing is mocked in this version.**
 
 > **This is a proprietary project. Source code is private. This page showcases the system's architecture and results.**
 
@@ -10,7 +10,7 @@
 
 ## Problem it solves
 
-Rewriting the same idea five times for five platforms is repetitive. This pipeline generates per-platform variants that respect each platform's limits and tone, then tracks publishing.
+Rewriting the same idea five times for five platforms is repetitive. This pipeline generates per-platform variants that respect each platform's limits and tone, then tracks publishing. It is built as the webhook backend for a Make.com scenario: the automation platform handles triggers, and this service holds the logic and data.
 
 ## Architecture
 
@@ -31,17 +31,21 @@ Rewriting the same idea five times for five platforms is repetitive. This pipeli
 
 ## Tech stack
 
-![Python](https://img.shields.io/badge/Python-161b22?style=for-the-badge&labelColor=161b22&color=161b22) ![FastAPI](https://img.shields.io/badge/FastAPI-161b22?style=for-the-badge&labelColor=161b22&color=161b22) ![Make.com](https://img.shields.io/badge/Make.com-161b22?style=for-the-badge&labelColor=161b22&color=161b22) ![OpenAI](https://img.shields.io/badge/OpenAI-161b22?style=for-the-badge&labelColor=161b22&color=161b22) ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-161b22?style=for-the-badge&labelColor=161b22&color=161b22) ![Jinja2](https://img.shields.io/badge/Jinja2-161b22?style=for-the-badge&labelColor=161b22&color=161b22)
+![Python](https://img.shields.io/badge/Python-161b22?style=for-the-badge&labelColor=161b22&color=161b22) ![FastAPI](https://img.shields.io/badge/FastAPI-161b22?style=for-the-badge&labelColor=161b22&color=161b22) ![Webhooks](https://img.shields.io/badge/Webhooks-161b22?style=for-the-badge&labelColor=161b22&color=161b22) ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-161b22?style=for-the-badge&labelColor=161b22&color=161b22) ![Jinja2](https://img.shields.io/badge/Jinja2-161b22?style=for-the-badge&labelColor=161b22&color=161b22)
 
 ## What it does in practice
 
-- Cuts repurposing work to one input per idea.
+- Prototype stage: variant generation within each platform's limits works end to end; publishing and scheduling run against a mock client.
 
 ## Screenshots
 
 **One idea, five platform variants**
 
 ![One idea, five platform variants](assets/00-home.png)
+
+**API surface: generation, variants, publish and schedule**
+
+![API surface: generation, variants, publish and schedule](assets/10-api.png)
 
 ---
 
