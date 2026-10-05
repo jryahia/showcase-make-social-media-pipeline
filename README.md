@@ -39,6 +39,8 @@ Rewriting the same idea five times for five platforms is repetitive. This pipeli
 
 ## Screenshots
 
+> Screenshots show the app running on seeded demo data, not client data.
+
 **One idea, five platform variants**
 
 ![One idea, five platform variants](assets/00-home.png)
